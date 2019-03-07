@@ -400,3 +400,325 @@
 //   }
 //  return (totmarks >= 89 && totmarks <= 100);
 //  }
+
+//---------------------The prime factors of 13195 are 5, 7, 13 and 29.
+
+//What is the largest prime factor of the number 600851475143 ?
+
+// --------------NOT DONE YET !!!!!!!!!!!!
+
+// function func(num) {
+// var arr = [2,3,5,7,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,109,
+// 113,127,131,139,149,151,157,163,167,173,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277,281,283,311,313,317,331,337,347,349,353,359,367,373,379,383,389,397,401,409,
+// 419,421,431,433,439,443,449,457,461,463,467,479,487,491,499,503,509,521,523,541,547,557,563,569,571,577,587,593,599,601,607,613,617,619,631,641,643,647,653,659,661,673,677,683,691,701,709,719,727,733,739,743,751,757,761,769,773,787,797,809,811,821,823,827,829,839,853,857,859,863,877,881,883,887,907,911,919,929,937,941,947,953,967,971,977,983,991,997]
+// var newArr = arr.sort(function(a,b) {
+//   return b-a;
+// });
+//
+// var arrFactors = [];
+// console.log(newArr);
+//
+// for(var i=0; i<newArr.length; i++) {
+//   if( num % newArr[i] === 0 ) {
+//      console.log((num / newArr[i]));
+//      arrFactors.push(newArr[i]);
+//      return arrFactors;
+//     }
+//  }
+//      // setTimeout(function() {
+//      //   func();
+//      // }, 1000);
+// }
+//
+// console.log(func(716151937));
+//
+// // 839 , 1471 ,
+//
+// function isPrime(num) {
+//   for(var i=2; i<num; i++) {
+//   if(num % i === 0) {
+//     return false;
+//   }
+//
+// }
+//    return num > 1
+// }
+// console.log(isPrime(716151937));
+
+//--------------------Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+
+// function sum(x, y) {
+//   var sum = x + y;
+//   if (sum >50 && sum < 80) {
+//     return 65;
+//   } else {
+//     return 80;
+//   }
+// }
+// console.log(sum(60,120));
+// console.log(sum(20,40));
+
+// --------------------- Write a JavaScript program to reverse a given string.
+
+// function rev(str) {
+//   return str.split("").reverse().join("");
+// }
+// console.log(rev("tugce"));
+
+//------------------------Write a JavaScript program to replace every character in a given string with the character following it in the alphabet
+
+// function func(str) {
+//   var arr = str.split("");
+//   var newArr = [];
+//   for(var i=0; i<arr.length; i++) {
+//     newArr.push(arr[i].charCodeAt() + 1);
+//   }
+//   return String.fromCharCode(...newArr);
+// }
+// console.log(func("tugce"));
+
+//-----------------------Write a JavaScript program to capitalize the first letter of each word of a given string
+
+// function cap(str) {
+//   var arr=str.split(" ");
+//   var arrNew=[];
+//   for (var i=0; i<arr.length; i++) {
+//     arrNew.push(arr[i][0].toUpperCase() + arr[i].substring(1) )
+//   }
+//   return arrNew.join(" ");
+// }
+// console.log(cap("hello word"));
+
+
+// ---------------------Write a JavaScript program to convert a given number to hours and minutes
+
+// function time_convert(num)
+//  {
+//   var hours = Math.floor(num / 60);
+//   var minutes = num % 60;
+//   return hours + ":" + minutes;
+// }
+//
+// console.log(time_convert(45));
+// console.log(time_convert(450));
+// console.log(time_convert(1441));
+
+//-----------------------Write a JavaScript program to convert the letters of a given string in alphabetical order
+//
+// function func(str) {
+//   var arr=str.split("");
+//   var sorted=arr.sort();
+//   var strNew = sorted.join("");
+//
+//   return strNew;
+// }
+// console.log(func("tugce"));
+
+//----------------------Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
+
+//
+// function ab_Check(str)
+//  {
+//     return (/a...b/).test(str) || (/b...a/).test(str);
+//  }
+//
+// console.log(ab_Check("Chainsbreak"));
+// console.log(ab_Check("pane borrowed"));
+// console.log(ab_Check("abCheck"));
+
+//--------------------Write a JavaScript program to count the number of vowels in a given string
+
+// function func(str) {
+//   var count = 0;
+//   for(var i=0; i<str.length; i++) {
+//    if(str[i] == "a" ||str[i] == "e" ||str[i] == "o"||str[i] == "u"||str[i] == "i"){
+//      count++;
+//     }
+//    } return count;
+//   }
+// console.log(func("muttalip"));
+
+//---------------------Write a JavaScript program to check if a given string contains equal number of p's and t's present.
+
+
+//                    ASK THIS ONE !!!!!!!!!!!!!!!
+// function func(str) {
+//
+// }
+// console.log(func("tuppe"));
+
+//-----------------------Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.
+
+//                   SOLVE THIS !!!!!!!!!!!!!!!
+// function func(x, y) {
+//
+// }
+
+//-----------------------Write a JavaScript program to extract the first half of a string of even length
+
+// function first_half (str) {
+//   if (str.length % 2 == 0) {
+//     return str.slice(0, str.length / 2);
+//   }
+//   return str;
+// }
+// console.log(first_half("Python"));
+// console.log(first_half("JavaScript"));
+// console.log(first_half("PHP"));
+
+//------------------------Write a JavaScript program to create a new string without the first and last character of a given string.
+
+// function func(str) {
+//   var arr=str.split("");
+//   var strNew = arr.shift();
+//
+//   arr.pop();
+//   return arr.join("");
+// }
+// console.log(func("tugce"));
+
+//------------------------Write a JavaScript program to concatenate two strings except their first character
+
+// function func(str1, str2) {
+//   var arr1 = str1.split("");
+//   var arr2= str2.split("");
+//    arr1.shift();
+//    arr2.shift();
+//    var con = arr1.join("")+ " " + arr2.join("");
+//
+//    return con;
+// }
+// console.log(func("tugce", "baydar"));
+
+//---------------------------Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
+
+// function func(str) {
+//   if(str.length >= 3) {
+//     var arr=str.split("");
+//     for (var i=0; i<3; i++) {
+//       arr.pop();
+//
+//     }
+//       return arr.join("");
+//   }
+//
+// }
+// console.log(func("baydar"));
+
+//----------------------Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
+
+// function func(str1, str2) {
+//
+// var min = Math.min(str1.length, str2.length);
+//
+// return str1.substring(str1.length - min) + str2.substring(str2.length - min);
+//
+// }
+// console.log(func("tugce", "baydar"));
+
+//------------------Write a JavaScript program to test if a string end with "Script". The string length must be greater or equal to 6.
+
+// function func(str) {
+//
+//   if( str.length >= 6) {
+//     if ( str.substring(str.length - 6, str.length) == "script") {
+//       return true;
+//     }
+//     else {return false;}
+//   }
+// }
+// console.log(func("javascript"));
+// console.log(func("tugcebaydar"));
+
+//----------------Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+
+// function func(str) {
+//   if((str.substring(0,3) === "Los") || (str.substring(0,3) === "New")) {
+//      return str;
+//   }else {
+//     return "";
+//   }
+// }
+//
+// console.log(func("Los Angeles"));
+// console.log(func("New York"));
+// console.log(func("istanbul"));
+
+//-----------------------Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.
+//
+// function func(str) {
+//   var arr =str.split("");
+//
+//
+//   if( arr[0] == "P" && arr[arr.length-1] == "P") {
+//       arr.shift();
+//       arr.pop();
+//       var newStr = arr.join("")
+//       return newStr;
+//   }
+//   else {
+//     return str;
+//   }
+// }
+
+//
+// console.log(func("PatatesP"));
+// console.log(func("TUgce"));
+
+//-------------------------Write a JavaScript program to create a new string using the first and last n characters from a given sting. The string length must be greater or equal to n
+
+// function func(str, n) {
+//
+//  if(str.length >= n) {
+//    var newStr = str[n] + str[str.length - n];
+//    return newStr;
+//  }
+//
+// }
+// console.log(func("tugce", 2));
+
+
+//-------------------------Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+
+// function func(array) {
+//
+//   return array[0] + array[1] + array[2];
+// }
+// console.log(func([1,2,3]));
+
+//------------------------- Write a JavaScript program to rotate the elements left of a given array of integers of length 3.
+
+// function func(arr) {
+//   return arr.reverse();
+// }
+// console.log(func([1,2,3]))
+
+//----------------------Write a JavaScript program to check if 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
+
+// function func(arr) {
+//   for(var i=0; i<arr.length; i++) {
+//     if (arr[i] == 1) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
+// console.log(func([1,2,3]));
+// console.log(func([4,2,3]));
+
+//---------------------Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
+
+function func(arr) {
+var newArr = [];
+var max = Math.max(...arr);
+console.log(max);
+
+for (var i=0 ; i<arr.length; i++) {
+  newArr.push(max);
+
+}
+return newArr;
+
+}
+console.log(func([-1,-2,-3]));
