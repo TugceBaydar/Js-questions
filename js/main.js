@@ -708,17 +708,315 @@
 // console.log(func([4,2,3]));
 
 //---------------------Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
+//
+// function func(arr) {
+// var newArr = [];
+// var max = Math.max(...arr);
+// console.log(max);
+//
+// for (var i=0 ; i<arr.length; i++) {
+//   newArr.push(max);
+//
+// }
+// return newArr;
+//
+// }
+// console.log(func([-1,-2,-3]));
 
-function func(arr) {
-var newArr = [];
-var max = Math.max(...arr);
-console.log(max);
+// -------------------Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer and each length 3
 
-for (var i=0 ; i<arr.length; i++) {
-  newArr.push(max);
+//
+// function func(arr1, arr2) {
+//   var newArr = [arr1[1] , arr2[1]];
+//   return newArr;
+// }
+//
+// console.log(func([1,2,3],[4,5,6]));
 
-}
-return newArr;
+//--------------------Write a JavaScript program to test if a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.
+//
+   //               COME BACK TO THIS ONE !!!!!!
+// function func(arr) {
+//
+//
+// }
+// console.log(func([30,50,60]));
+// console.log(func([30,40,60]));
 
-}
-console.log(func([-1,-2,-3]));
+//----------------------Write a JavaScript program to add two digits of a given positive integer of length two.
+
+// function func(arr) {
+//   var newArr = [];
+//   for (var i=0; i<arr.length; i++) {
+//      newArr.push(arr[i] % 10 + Math.floor( arr[i] / 10));
+//  }
+//     return newArr;
+// }
+// console.log(func([12,34]));
+
+
+//-----------------------Write a JavaScript program to add two digits of a given positive integer of length two.
+
+// function func(n) {
+//   return n %10 + Math.floor(n / 10);
+// }
+// console.log(func(12));
+
+//---------------------Write a JavaScript to find the longest string from an given array of strings
+
+//                            ASK THIS ONE !!!!!!!!!!!!!!!!!!
+// function func(arr) {
+//
+//
+//
+// }
+//
+//
+// console.log(func(["tugce","baydar"]));
+
+//----------------------Write a JavaScript to replace each character of a given string by the next one in the English alphabet.
+
+// function func(str) {
+//   var arr = str.split("");
+//
+//   for(var i=0 ; i<arr.length; i++) {
+//     arr[i] = arr[i].charCodeAt() + 1;
+//   }
+//   return String.fromCharCode(...arr);
+// }
+//
+// console.log(func("tugce"));
+
+//-------------------- Write a JavaScript code to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
+
+//                  COME BACK TO THIS ONE !!!!!!!!!!!!!!!!!!!!!
+
+// function func(arr) {
+//   var newArr=[];
+//   var newArr2 = [];
+//   var sumArr = [];
+//   var sum=0;
+//   var sum2=0;
+//
+//     for(var i=0 ; i<arr.length; i=i+2) {
+//        newArr.push(arr[i]);
+//        newArr2.push(arr[i+1]);
+//     }
+//    console.log(newArr + "-" +  newArr2 );
+//
+//     for(var x=0; x<newArr.length;  x++) {
+//         sum = sum + newArr[x];
+//
+//     }
+//     console.log(sum);
+//
+//     for(var y=0; y<newArr2.length;  y++) {
+//         sum2 = sum2 + newArr2[y];
+//
+//     }
+//     console.log(sum2);
+//
+// }
+//
+//
+// console.log(func([1,2,3,4,5]));
+
+//---------------------------Write a JavaScript program to find the types of a given angle.
+// Types of angles:
+// Acute angle: An angle between 0 and 90 degrees.
+// Right angle: An 90 degree angle.
+// Obtuse angle: An angle between 90 and 180 degrees.
+// Straight angle: A 180 degree angle.
+//
+//
+// function func(angle) {
+//   if(angle > 0 && angle < 90) {
+//     return "Acute angle";
+//   }else if (angle == 90) {
+//     return "right angle";
+//   } else if(angle >90 && angle < 180 ) {
+//     return "Obtuse angle";
+//   } else if (angle == 180) {
+//     return "straight angle";
+//   }
+// }
+// console.log(func(178));
+
+//----------------------------Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements
+
+//                     UNDERSTAND THIS !!!!!!!!
+
+// function array_checking(arra1, arra2) {
+//
+//   for(var i = 0; i < arra1.length; i++) {
+//     for(var j = i; j < arra1.length; j++) {
+//       var result = true,
+//         temp = arra1[i];
+//       arra1[i] = arra1[j];
+//       arra1[j] = temp;
+//       for(var k = 0; k < arra1.length; k++) {
+//         if(arra1[k] !== arra2[k]) {
+//           result = false;
+//           break;
+//         }
+//       }
+//       if(result) {
+//         return true;
+//       }
+//       arra1[j] = arra1[i];
+//       arra1[i] = temp;
+//     }
+//   }
+//   return false;
+// }
+//
+// console.log(array_checking([10,20,30], [10,20,30]))
+// console.log(array_checking([10,20,30], [30,10,20]))
+// console.log(array_checking([10,20,30,40], [10,30,20,40]))
+
+
+//---------------------------------Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
+
+// function func(num0, num1 , d) {
+//   if((num0 % d == 0 && num1 % d ==0) ||(num0 % d !== 0 && num1 % d !==0) ) {
+//     return "similar";
+//   }else {
+//     return false;
+//   }
+// }
+//
+// console.log(func(10,20,5));
+// console.log(func(16,20,3));
+
+//---------------------------------Write a JavaScript program to find the kth greatest element of a given array of integers
+
+
+
+
+
+
+
+
+//--------------------------Write a JavaScript program to find the maximal difference between any two adjacent elements of a given array of integers
+
+// function max_difference(arr) {
+// 	var max = 0;
+//   var temp;
+// 	for (var i = 0; i < arr.length - 1; i++)
+//       {
+// 		temp = Math.abs(arr[i] - arr[i + 1]);
+// 		max = Math.max(max, temp);
+// 	  }
+// 	return max;
+// }
+//
+// console.log(max_difference([1, 2, 3, 8, 9]))
+// console.log(max_difference([1, 2, 3, 18, 9]))
+// console.log(max_difference([13, 2, 3, 8, 9]))
+
+
+//--------------------------Write a JavaScript program to find the maximal difference among all possible pairs of a given array of integers
+//
+// function func(arr) {
+//   var max = 0;
+//
+//   for(var i=0 ; i<arr.length; i++) {
+//     var max = Math.max(...arr);
+//     var min = Math.min(...arr);
+//
+//   }
+//     console.log( min + "-" + max);
+//
+//     return max - min;
+// }
+// console.log(func([1, 2, 3, 8, 9]));
+// console.log(func([1, 2, 3, 18, 9]))
+// console.log(func([13, 2, 3, 8, 9]))
+
+//--------------------------Write a JavaScript program to find the number which appears most in a given array of integers.
+
+//                      ASK THIS ONE !!!!!!!!!!!!!!!
+
+
+// function func(arr) {
+//  var obj = {};
+//  var newArr = [];
+//  for(var i=0 ; i<arr.length; i++) {
+//    if(!obj[arr[i]]) {
+//      obj[arr[i]] = 1;
+//    } else {
+//      newArr.push(arr[i]);
+//    }
+//  }
+//    return newArr;
+// }
+//
+// console.log(func([1,1,2,3,3,3,4,4,4,4,4,4]));
+
+//--------------------------Write a JavaScript program to replace all the numbers with a specified number of a given array of integers
+
+// function func(arr, num) {
+//   for(var i=0; i<arr.length; i++) {
+//     arr[i] = num;
+//   }
+//   return arr;
+// }
+// console.log(func([1,2,3], 5));
+
+//--------------------------Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.
+
+//
+// function sum_adjacent_difference(arr) {
+// 	var result = 0;
+// 	for (var i = 1; i < arr.length; i++) {
+// 		result += Math.abs(arr[i] - arr[i - 1]);
+// 	}
+// 	return result;
+// }
+//
+// console.log(sum_adjacent_difference([1, 2, 3, 2, -5]));
+
+//--------------------------Write a JavaScript program to find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.
+
+// function func(str){
+//
+//   }
+
+
+
+
+
+//-------------------------- Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case
+
+// function change_case(new_str) {
+//   var x = 0;
+//   var y = 0;
+//
+//   for (var i = 0; i < new_str.length; i++) {
+//     if (/[A-Z]/.test(new_str[i])) {
+//       x++;
+//     } else y++;
+//   }
+//
+//   if (y > x)
+//   return new_str.toLowerCase();
+//   return new_str.toUpperCase();
+//
+// }
+//
+// console.log(change_case("Write"))
+// console.log(change_case("PHp"))
+
+//---------------------------Write a JavaScript program to check if there is at least one element which occurs in two given sorted arrays of integers.
+// 
+// function func(arr1, arr2) {
+// for(var i=0; i<arr1.length; i++) {
+//   if(arr2.indexOf(arr1[i]) != -1) {
+//     return true;
+//   }
+//
+// }
+//
+//      return false;
+// }
+// console.log(func([1,2,3], [7,4,5]));
