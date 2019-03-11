@@ -1008,7 +1008,7 @@
 // console.log(change_case("PHp"))
 
 //---------------------------Write a JavaScript program to check if there is at least one element which occurs in two given sorted arrays of integers.
-// 
+//
 // function func(arr1, arr2) {
 // for(var i=0; i<arr1.length; i++) {
 //   if(arr2.indexOf(arr1[i]) != -1) {
@@ -1020,3 +1020,410 @@
 //      return false;
 // }
 // console.log(func([1,2,3], [7,4,5]));
+
+
+//---------------------------Write a JavaScript program to find the number of inversions of a given array of integers.
+//
+// function func(arr) {
+//   var x = 0;
+//   for(var i=0; i<arr.length; i++) {
+//     for(var j= i + 1; j<arr.length; j++) {
+//       if(arr[i] > arr[j]) {
+//         x++;
+//       }
+//     }
+//   }
+//    return x;
+// }
+//
+// console.log(func([0, 3, 2, 5, 9]));
+// console.log(func([1, 5, 4, 3]));
+// console.log(func([10, 30, 20, -10]));
+
+//-----------------------------Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number
+
+
+//                         TRY THIS ONE MORE TIME !!!!!!!!!!!!
+// function func(num) {
+//   var arr = ("" + num).split("");
+//   num_last_digit = num % 10;
+//   num_first_digit = Math.floor(num / Math.pow(10 , arr.length - 1));
+//   num_middle_digit = (Math.floor(num / 10)) % 10;
+//   var max_number = [];
+//
+//
+//   var max_digit = Math.max(...arr);
+//   max_number.push(arr.slice(arr.indexOf(max_digit) , arr.length-1));
+//
+//
+//
+//    console.log(max_number);
+//    console.log(max_digit);
+//    console.log(num_last_digit);
+//    console.log(num_first_digit);
+//    console.log(num_middle_digit);
+// }
+// console.log(func(42345));
+
+
+//----------------------------Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer
+
+//
+// function func(arr, num) {
+//   for(var i=0; i<arr.length; i++) {
+//    for(var j = i +1; j<arr.length; j++) {
+//      if(Math.abs(arr[i]-arr[j]) < num) {
+//        return true;
+//      }
+//    }
+//   }
+//     return false;
+// }
+//
+// console.log(func([2,4,6,7], 1));
+
+//----------------------------- Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number
+
+///                  COME BACK TO THIS ONE !!!!!!!!!!!!!
+
+// function func(num) {
+//   var arr = ("" + num).split("");
+//   console.log(arr);
+//   let sum=0;
+//   for(var i=0; i<arr.length; i++) {
+//      sum += Number(arr[i]);
+//
+//   }
+//    console.log(sum);
+//    var arr2= ("" + sum).split("")
+//    var sum2 = 0;
+//    var x = 0;
+//         for(j=0; j<arr2.length; j++) {
+//             sum2 = sum2 + Number(arr2[j]);
+//          }
+//
+//
+//
+//    console.log(sum2);
+//
+// }
+// console.log(func(185));
+
+//-----------------------------Write a JavaScript program to divide an integer by another integer as long as the result is an integer and return the result.
+
+// function func(num , divider) {
+//  if(divider==1) {
+//   return num;
+// }else {
+//   while (num % divider === 0) {
+//     num = num / divider;
+//   }
+//   return num;
+// }
+//
+//
+// }
+// console.log(func(150,30));
+// console.log(func(12,2));
+
+//------------------------------Write a JavaScript program to find the number of sorted pairs formed by its elements of an given array of integers such that one element in the pair is divisible by the other one.
+
+// function func(arr) {
+//   var result = 0;
+//   var array=[];
+//   for(var i=0; i<arr.length; i++) {
+//     for(var j=i+1; j<arr.length; j++) {
+//       if(arr[i] % arr[j] == 0 || arr[j] % arr[i] == 0) {
+//         result++
+//
+//       }
+//     }
+//
+//   }
+//   return result;
+// }
+//
+// console.log(func([2,4,16]));
+
+
+// ------------------------------Write a JavaScript program to create the dot products of two given 3D vectors.
+//
+// function func(arr1 , arr2) {
+//   var result = 0;
+//   for(var i=0; i < 3; i++) { // arr1.length = arr2.length =3
+//         result += arr1[i] * arr2[i]
+//   }
+//   return result;
+// }
+//
+// console.log(func([1,2,3], [2,3,4]))
+
+//-----------------------------Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+
+//                            COME BACK TO THIS !!!!!!!!
+
+// function func(num) {
+//
+// }
+//
+// console.log(func(7));
+
+//------------------------------ Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
+
+//                            COME BACK TO THIS !!!!!!!!
+
+// function func(arr , num ) {
+//
+// var arrayEven = [];
+//
+//   for(var i=0; i < num; i++) {
+//     if(arr[i] % 2 == 0 ) {
+//       arrayEven.push(arr[i]);
+//     }
+//   }
+//    arrayEven.push(0);
+//    return arrayEven[0];
+//
+//
+//
+//
+// }
+//
+// console.log(func([1,2,3,4,5,6,7,8], 5));
+// console.log(func([1,3,5,6,7,8], 6));
+
+
+//----------------------------------Write a JavaScript program to check a number from three given numbers where two numbers are equal, find the third one
+//
+// function func(num1, num2, num3) {
+//   if(num1 == num2) {
+//       return num3;
+//   } else if(num2 == num3) {
+//     return num1;
+//   } else {
+//     return num2;
+//   }
+// }
+// console.log(func(1,1,2))
+// console.log(func(3,2,3))
+// console.log(func(1,3,1))
+
+//--------------------------Write a JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number.
+
+
+
+
+
+
+//--------------------------Write a JavaScript program to calculate the sum n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer
+//
+// function int_sum(num) {
+//     let s_sum = 0;
+//     while (num > 0) {
+//         s_sum += num;
+//         num = Math.floor(num / 2);
+//     }
+//     return s_sum;
+// }
+// console.log(int_sum(8))
+// console.log(int_sum(9))
+// console.log(int_sum(26))
+
+//--------------------------Write a JavaScript program to check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.).
+
+// function func(str) {
+//   var arr=str.split("");
+//   for(var i=0; i<arr.length; i++) {
+//     if(arr[0].toUpperCase() && arr[arr.length-1] == ".") {
+//       return true;
+//     }
+//     return false;
+//   }
+// }
+//
+// console.log(func("I am Tugce."));
+// console.log(func("i am Tugce"));
+// console.log(func("I am Tugce"));
+
+//-------------------------- Write a JavaScript program to find all the possible options to replace the hash in a string (Consists of digits and one hash (#)) with a digit to produce an integer divisible by 3.
+
+// function func(str) {
+//   var arr = str.split("");
+//   var x = Math.floor(Math.random() * Math.floor(9))
+//   console.log(x);
+//   var array=[];
+//   if(arr.length === 2 && (x + arr[0] + arr[1]) % 3 === 0) {
+//     arr.splice(1,0,x);
+//     console.log(arr);
+//     array.push(arr[0],arr[1],arr[2]);
+//     return array.join("");
+//   }
+//
+// }
+// console.log(func("32"));
+
+
+//----------------------------Write a JavaScript program to check if a given number is in a given range
+
+// function func(num, array) {
+//
+//   if(num > array[0] && num < array[1]) {
+//     return true;
+//   }
+//   return false;
+// }
+//
+// console.log(func(7,[3,8]));
+// console.log(func(7,[3,5]));
+
+//------------------------- Write a JavaScript program to check if a given integer has an increasing digits sequence
+
+// function func(num) {
+//   var arr= ("" + num).split("");
+//
+//    for(var i=0; i<arr.length; i++) {
+//      if(arr[i] < arr[i+1]) {
+//        return true;
+//      }
+//      return false;
+//    }
+//
+//
+// }
+// console.log(func(123));
+// console.log(func(42335));
+
+//----------------------- Write a JavaScript program to check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence
+
+// function is_monotonous(num) {
+//     if (num.length === 1) {
+//         return true;
+//     }
+//     var num_direction = num[1] - num[0];
+//     for (var i = 0; i < num.length - 1; i++) {
+//         if (num_direction * (num[i + 1] - num[i]) <= 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(is_monotonous([1, 2, 3]));
+// console.log(is_monotonous([1, 2, 2]))
+// console.log(is_monotonous([-3, -2, -1]))
+
+
+// --------------------------Write a JavaScript program to find if the members of an given array of integers is a permutation of numbers from 1 to a given integer
+
+// function func(arr,num) {
+//
+// for(var i=0; i<num; i++) {
+//   if(!arr.includes(i+1)) {
+//     return false;
+//     }
+//
+//    }
+//     return true;
+//
+// }
+// console.log(func([1,2,3],3));
+// console.log(func([1,2,3],4));
+// console.log(func([1,2,3,4],4));
+// console.log(func([1,2,3],5));
+
+
+// --------------------------Write a JavaScript program to find the longest string from a given array.
+
+//                         COME BACK TO THIS ONE !!!!!!
+
+
+// function func(arr) {
+//
+//    var newArr = [];
+//     var max = 0;
+//     for(var i=0; i<arr.length; i++) {
+//
+//      newArr.push(arr[i].split(""));
+//
+//
+//
+//     }
+//      console.log(newArr[0].length)
+//      console.log(newArr[1].length)
+//      console.log(newArr);
+//
+//
+// }
+//
+// console.log(func(["tugce","baydar"]))
+
+//---------------------------Write a JavaScript program to get the largest even number from an array of integers.
+
+// function func(arr) {
+// var max = 0;
+//  for(var i=0; i<arr.length; i++) {
+//       if ( arr[i] % 2 === 0 && max < arr[i]) {
+//             max = arr[i];
+//       }
+//  }
+//     return max;
+// }
+//
+// console.log(func([1,2,4,5,7,9]))
+
+//-----------------------Write a JavaScript program to find the smallest round number that is not less than a given value.
+
+// function func(num) {
+//   if( num % 10 ) {
+//     return num + (10-(num % 10));
+//   }
+// }
+// console.log(func(63));
+// console.log(func(56));
+
+//----------------------Write a JavaScript program to find the smallest prime number strictly greater than a given number
+//
+// function func(num) {
+//
+//
+//
+//
+//
+//
+// }
+// console.log(func(7));
+// console.log(func(10));
+
+
+//------------------------- Write a JavaScript program to find the number of even digits in a given integer
+
+// function func(num) {
+//
+//  var arr = ("" + num).split("");
+//  var x = 0;
+//  for(var i=0; i<arr.length; i++) {
+//    if( arr[i] % 2==0) {
+//      x++;
+//    }
+//  }
+//  return x;
+//
+// }
+//
+// console.log(func(123))
+// console.log(func(124))
+// console.log(func(12346))
+
+
+//----------------------------Write a JavaScript program to find all distinct prime factors of a given integer
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
