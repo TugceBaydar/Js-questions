@@ -1426,4 +1426,204 @@
 
 
 
-//------------------------------Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
+//------------------------------Write a JavaScript program to remove all characters from a given string that appear more than once.
+
+
+//                       COME BACK TO THIS ONE !!!!!!!!!!!!!!
+
+
+// function func(str) {
+//
+// var arr=str.split("");
+// var obj={};
+// var array=[];
+//
+// for(var i=0; i<arr.length; i++) {
+//   if(!obj[arr[i]]){
+//     obj[arr[i]] = 1
+//   } else{
+//   array.push(arr[i])
+//  }
+// }
+//   console.log(array);
+//
+//  var removedIndexs=[];
+//  var removedArr;
+//  for(var j=0; j<array.length; j++) {
+//
+//
+//   removedIndexs.push(arr.indexOf(array[j]));
+//
+//
+// }
+//   console.log(removedIndexs); // 1,5
+//   removedArr = arr.splice(removedIndexs[0] , 1);
+//
+//
+//   console.log(removedArr);
+//
+//   console.log(removedArr.join(""));
+// }
+// console.log(func("tugcuee"));
+
+
+
+//         another solution
+
+// function func(str) {
+//   var arr=str.split("");
+//   var result = [];
+//
+//   for(var i=0; i<arr.length; i++) {
+//     if(str.indexOf(arr[i]) === str.lastIndexOf(arr[i])) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result.join("");
+// }
+//
+// console.log(func("Tuugcee"));
+
+//------------------------------Write a JavaScript program to replace the first digit in a string (should contains at least digit) with $ character.
+//
+// function func(str) {
+//
+//   return str.replace(/[0-9]/, '$');
+// }
+// console.log(func("12tgc"));
+
+
+//---------------------------Write a JavaScript program to test if a given integer is greater than 15 return the given number, otherwise return 15
+
+// function func(num) {
+//   if(num > 15) {
+//     return num;
+//   }
+//   return 15;
+// }
+//
+// console.log(func(20));
+// console.log(func(13));
+
+
+//--------------------------Write a JavaScript program to find the position of a rightmost round number in an array of integers. Returns 0 if there are no round number.
+
+// function func(arr) {
+// var round=0;
+// var newArr = [];
+// for(var i = 0; i<arr.length; i++) {
+//   if(arr[i] % 10 === 0) {
+//     round++
+//     newArr.push(arr[i]);
+//   }
+//
+// }
+//      console.log(newArr);
+//      return round;
+// }
+// console.log(func([10,2,3,20,30]));
+// console.log(func([1,2,3]));
+
+
+//-------------------------Write a JavaScript program to check if all the digits in a given number are the same or not.
+
+//                         COME BACK TO THIS !!!!!
+
+// function func(num) {
+//
+// }
+// console.log(func(111));
+// console.log(func(123));
+// console.log(func(2222222));
+// console.log(func(3272423));
+
+//------------------------Write a JavaScript program to find the number of elements which presents in both of the given arrays.
+
+// function func(arr1, arr2) {
+//  var count = 0;
+//  var max = Math.max(arr1.length, arr2.length);
+//
+//  for(var i=0; i<max; i++) {
+//    if(arr2.includes(arr1[i])) {
+//      count++;
+//    }
+//  }
+//    return count;
+// }
+// console.log(func([1,2,3,4,6],[4,2,6,3,5]));
+// console.log(func([1,2,3,4,6],[8,7,9]));
+
+//-----------------------Write a JavaScript program to sort the strings of a given array of strings in the order of increasing lengths
+
+// function sort_by_string_length(arra) {
+// 	for (var i = 0; i < arra.length; i++) {
+// 		for (var j = i + 1; j < arra.length; j++) {
+// 			if (arra[i].length > arra[j].length) {
+// 				var m = arra[i];
+// 				arra[i] = arra[j];
+// 				arra[j] = m;
+// 			}
+// 		}
+// 	}
+// 	return arra;
+// }
+// var arra = ["xyz","acd","aa","bb","zzz","", "a","b"];
+// console.log("Original array: "+ arra+"\n");
+// console.log(sort_by_string_length(["xyz","acd","aa","bb","zzz","", "a","b"]));
+
+
+//-------------------------Write a JavaScript program to find the maximum integer n such that 1 + 2 + ... + n <= an given integer.
+
+
+//                      COME BACK TOT HIS ONE !!!!!!!!!
+
+
+
+
+//--------------------------Write a JavaScript program to compute the sum of all digits that occur in a given string
+
+//
+// function func(str) {
+//   var arr =str.split("");
+//   var sum=0;
+//
+//   for(var i=0; i<arr.length; i++) {
+//   if(/[0-9]/.test(arr[i])) {
+//     sum = sum + Number(arr[i])
+//   }
+// }
+//   return sum;
+// }
+// console.log(func("tu128gce5"));
+
+//----------------------------Write a JavaScript program to swap two halves of a given array of integers of even length.
+
+
+
+
+
+
+
+
+
+
+//----------------------------Write a JavaScript program to change the capitalization of all letters in a given string.
+
+// function func(str) {
+//  var arr=str.split("");
+//  for(var i=0 ; i<arr.length; i++) {
+//    if(/[A-Z]/.test(arr[i])) {
+//       arr[i] = arr[i].toLowerCase();
+//    } else  {
+//       arr[i] = arr[i].toUpperCase();
+//    }
+//
+//  }
+//
+//    return arr.join("");
+//
+// }
+//
+// console.log(func("tUgcE"));
+
+//-----------------------------
