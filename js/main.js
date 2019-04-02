@@ -182,31 +182,27 @@
 
 //---------------------Have the function AlphabetSoup(str) take the str string parameter being passed and return the string with the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation symbols will not be included in the string.
 
-//                          ASK THIS ONE , NOT DONE YET !!!!!!!!!!!!!!!!!!!!!!
+//
 // function func(str) {
-//    var arr = str.split("");
-//    var arrNew = [];
-//    for (var i=0; i<arr.length; i++) {
-//       // console.log(arr[i].charCodeAt());
-//         arrNew.push(arr[i].charCodeAt());
+//   var arr=str.split("");
+//   for(var i=0; i<arr.length; i++) {
 //
-//    }
-//      // console.log(arrNew);
+//     for(var x=i; x<arr.length; x++) {
 //
-//           function sortNumber(x , y) {
-//             return x-y;
-//           }
+//         if(arr[x] < arr[i]) {
+//           console.log('swapping');
+//           var temp = arr[i];
+//           arr[i] = arr[x];
+//           arr[x] = temp;
 //
-//           arrNew.sort(sortNumber);
-//           var arrLast = [];
-//           arrLast.push(arrNew.join(","));
-//           console.log(arrLast);
+//         }
+//     }
 //
-//           var result = String.fromCharCode.apply(String, arrLast);
-//           console.log(result);
+//   }
+//
+//   return arr.join("");
+//
 // }
-//
-// console.log(func("baydar"));
 
 //--------------------------1. Write a JavaScript program to display the current day and time in the //following format.
 // Sample Output : Today is : Tuesday.
@@ -330,22 +326,20 @@
 //------------------------Write a JavaScript program to check if a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one.
 
 
-//               UNDERSTAND THIS ONE !!!!!!!!!!!!!!!!!!
-
 // function check_script(str)
 // {
-//   if (str.length < 6) {
+//
+//   if(str.length < 10) {
 //     return str;
 //   }
-//   let result_str = str;
 //
-//   if (str.substring(10, 4) == 'Script')
-//     {
-//
-//    result_str = str.substring(0, 4) + str.substring(10,str.length);
-//
+//   if(str.substring(4,10) == "Script") {
+//     return str.substring(0,4);
 //   }
-//   return result_str;
+//
+//   return str;
+//
+//
 // }
 //
 // console.log(check_script("JavaScript"));
@@ -407,43 +401,39 @@
 
 // --------------NOT DONE YET !!!!!!!!!!!!
 
-// function func(num) {
-// var arr = [2,3,5,7,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,109,
-// 113,127,131,139,149,151,157,163,167,173,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277,281,283,311,313,317,331,337,347,349,353,359,367,373,379,383,389,397,401,409,
-// 419,421,431,433,439,443,449,457,461,463,467,479,487,491,499,503,509,521,523,541,547,557,563,569,571,577,587,593,599,601,607,613,617,619,631,641,643,647,653,659,661,673,677,683,691,701,709,719,727,733,739,743,751,757,761,769,773,787,797,809,811,821,823,827,829,839,853,857,859,863,877,881,883,887,907,911,919,929,937,941,947,953,967,971,977,983,991,997]
-// var newArr = arr.sort(function(a,b) {
-//   return b-a;
-// });
-//
-// var arrFactors = [];
-// console.log(newArr);
-//
-// for(var i=0; i<newArr.length; i++) {
-//   if( num % newArr[i] === 0 ) {
-//      console.log((num / newArr[i]));
-//      arrFactors.push(newArr[i]);
-//      return arrFactors;
-//     }
-//  }
-//      // setTimeout(function() {
-//      //   func();
-//      // }, 1000);
-// }
-//
-// console.log(func(716151937));
-//
-// // 839 , 1471 ,
-//
 // function isPrime(num) {
 //   for(var i=2; i<num; i++) {
-//   if(num % i === 0) {
-//     return false;
+//     if(num % i == 0) {
+//       return false;
+//     }
+//
 //   }
+//   return true;
+// }
+//
+// function func(num) {
+//      for(var i=2; i>=2; i--) {
+//        if(num%i == 0) {
+//          if(isPrime(i)) {
+//            return i;
+//          }
+//        }
+//      }
 //
 // }
-//    return num > 1
-// }
-// console.log(isPrime(716151937));
+//
+// console.log(func(600851475143));
+
+
+
+
+
+
+
+
+
+
+
 
 //--------------------Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
 
@@ -541,18 +531,36 @@
 //---------------------Write a JavaScript program to check if a given string contains equal number of p's and t's present.
 
 
-//                    ASK THIS ONE !!!!!!!!!!!!!!!
 // function func(str) {
+//  var arr=str.split("");
+//  var countP=0;
+//  var countT = 0
+//  for(var i=0 ; i<arr.length; i++) {
+//    if(arr[i] == "p") {
+//      countP++
+//    } else if(arr[i] == "t"){
+//      countT++
+//    }
+//
+//  }
+//  if(countT == countP) {
+//    return true;
+//  }
+//   return false;
 //
 // }
-// console.log(func("tuppe"));
+// console.log(func("ttuppe"))
+
+
 
 //-----------------------Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.
 
-//                   SOLVE THIS !!!!!!!!!!!!!!!
-// function func(x, y) {
 //
+// function func(x,y) {
+//   var div = x/y;
+//   return div.toString();
 // }
+// console.log(func(10,2))
 
 //-----------------------Write a JavaScript program to extract the first half of a string of even length
 
@@ -591,19 +599,19 @@
 // console.log(func("tugce", "baydar"));
 
 //---------------------------Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
-
+//
 // function func(str) {
 //   if(str.length >= 3) {
-//     var arr=str.split("");
-//     for (var i=0; i<3; i++) {
-//       arr.pop();
 //
-//     }
-//       return arr.join("");
+//     var back = str.substring(str.length-3)
+//     console.log(back)
+//     var front = str.substring(0,str.length-3)
+//     console.log(front)
+//
+//     return back + front;
 //   }
-//
 // }
-// console.log(func("baydar"));
+// console.log(func("baydar"))
 
 //----------------------Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
 
@@ -696,16 +704,16 @@
 //----------------------Write a JavaScript program to check if 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
 
 // function func(arr) {
-//   for(var i=0; i<arr.length; i++) {
-//     if (arr[i] == 1) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   }
+//
+// if(arr[0]==1 || arr[arr.length-1] ==1) {
+//   return true;
 // }
-// console.log(func([1,2,3]));
-// console.log(func([4,2,3]));
+//   return false;
+// }
+//
+// console.log(func([1,2,3]))
+// console.log(func([2,3,1]))
+// console.log(func([2,3,4]))
 
 //---------------------Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
 //
@@ -735,13 +743,29 @@
 
 //--------------------Write a JavaScript program to test if a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.
 //
-   //               COME BACK TO THIS ONE !!!!!!
+
 // function func(arr) {
+//  if(arr.length !== 2 && arr.length !== 3) {
+//    return false;
+//  }
+//   var count1=0;
+//   var count2=0;
+//   for(var i=0; i<arr.length; i++) {
+//     if(arr[i] == 30 ) {
+//       count1++;
+//     } else if (arr[i] == 40) {
+//       count2++;
+//     }
+//     if(count1 ==2 || count2==2) {
+//       return true;
+//     }
 //
+//   }
+//         return false;
 //
 // }
 // console.log(func([30,50,60]));
-// console.log(func([30,40,60]));
+// console.log(func([30,40,30,40,50]));
 
 //----------------------Write a JavaScript program to add two digits of a given positive integer of length two.
 
@@ -764,15 +788,27 @@
 
 //---------------------Write a JavaScript to find the longest string from an given array of strings
 
-//                            ASK THIS ONE !!!!!!!!!!!!!!!!!!
 // function func(arr) {
 //
+// var max = 0;
+// for(var i=0; i<arr.length; i++) {
+//
+//   if(max < arr[i].length) {
+//     max = arr[i].length
+//   }
+//
+// }
+//  console.log(max)
+//  for(var x=0; x<arr.length; x++) {
+//    if(arr[x].length == max ) {
+//      return arr[x];
+//    }
+//  }
 //
 //
 // }
-//
-//
-// console.log(func(["tugce","baydar"]));
+// console.log(func(["tugce","baydar","muttalip"]))
+
 
 //----------------------Write a JavaScript to replace each character of a given string by the next one in the English alphabet.
 
@@ -788,38 +824,32 @@
 // console.log(func("tugce"));
 
 //-------------------- Write a JavaScript code to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
-
-//                  COME BACK TO THIS ONE !!!!!!!!!!!!!!!!!!!!!
-
+//
 // function func(arr) {
-//   var newArr=[];
-//   var newArr2 = [];
-//   var sumArr = [];
-//   var sum=0;
-//   var sum2=0;
+//   var arr1 = [];
+  // var arr2 = [];
+//   var resultArr= [];
+//   var sum1 = 0;
+//   var sum2 = 0;
 //
-//     for(var i=0 ; i<arr.length; i=i+2) {
-//        newArr.push(arr[i]);
-//        newArr2.push(arr[i+1]);
-//     }
-//    console.log(newArr + "-" +  newArr2 );
+//   for(var i=0; i<arr.length; i=i+2) {
+//     arr1.push(arr[i]);
+//     sum1 = sum1 + arr[i]
+//   }
+//   for(var x=1; x<arr.length; x=x+2) {
+//     arr2.push(arr[x])
+//     sum2 = sum2 + arr[x]
+//   }
+//   console.log(arr1);
+//   console.log(arr2);
+//   console.log(sum1);
+//   console.log(sum2);
 //
-//     for(var x=0; x<newArr.length;  x++) {
-//         sum = sum + newArr[x];
+//   resultArr.push(sum1 , sum2)
 //
-//     }
-//     console.log(sum);
-//
-//     for(var y=0; y<newArr2.length;  y++) {
-//         sum2 = sum2 + newArr2[y];
-//
-//     }
-//     console.log(sum2);
-//
+//   return resultArr;
 // }
-//
-//
-// console.log(func([1,2,3,4,5]));
+// console.log(func([1,2,3,4,5]))
 
 //---------------------------Write a JavaScript program to find the types of a given angle.
 // Types of angles:
@@ -845,28 +875,69 @@
 //----------------------------Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements
 
 //                     UNDERSTAND THIS !!!!!!!!
-
-// function array_checking(arra1, arra2) {
+// function compare_arrays(arr1, arr2) {
+//   if(arr1.length !== arr2.length) {
+//     return false;
+//   }
 //
-//   for(var i = 0; i < arra1.length; i++) {
-//     for(var j = i; j < arra1.length; j++) {
-//       var result = true,
-//         temp = arra1[i];
-//       arra1[i] = arra1[j];
-//       arra1[j] = temp;
-//       for(var k = 0; k < arra1.length; k++) {
-//         if(arra1[k] !== arra2[k]) {
-//           result = false;
-//           break;
-//         }
-//       }
-//       if(result) {
-//         return true;
-//       }
-//       arra1[j] = arra1[i];
-//       arra1[i] = temp;
+//   for(var i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i])
+//     {
+//       return false;
 //     }
 //   }
+//
+//   return true;
+// }
+//
+// function generateSwap(arr ,i, y) {
+//   var newArray = arr.slice();
+//
+//   temp = newArray[i];
+//   newArray[i] = newArray[y];
+//   newArray[y] = temp;
+//
+//   return newArray;
+// }
+//
+// function generateSwaps(arr) {
+//   var swaps = [];
+//
+//   for(var x=0; x<arr.length; x++) {
+//     for(var y = 0; y<arr.length; y++)
+//     {
+//       // [10,30,20,40]
+//       // 0,1 ==> [30,10,20,40]
+//       // 0,2 ==> [20,30,10,40]
+//       if(x == y)
+//       {
+//         continue;
+//       }
+//       swaps.push(generateSwap(arr, x, y));
+//     }
+//   }
+//
+//   return swaps;
+// }
+//
+// function array_checking(arr1, arr2) {
+//   if (compare_arrays(arr1, arr2)) {
+//     return true;
+//   }
+//   if(arr1.length !== arr2.length) {
+//     return false;
+//   }
+//
+//   permutations = generateSwaps(arr2);
+//   //console.log(permutations);
+//   //console.log(arr1);
+//
+//   for(var i = 0; i < permutations.length; i++) {
+//     if (compare_arrays(permutations[i],arr1)) {
+//       return true;
+//     }
+//   }
+//
 //   return false;
 // }
 //
@@ -890,11 +961,31 @@
 
 //---------------------------------Write a JavaScript program to find the kth greatest element of a given array of integers
 
-
-
-
-
-
+// function func(arr, k) {
+//  var temp;
+//   for(var i=0; i<arr.length; i++) {
+//     for(j=0; j<arr.length; j++) {
+//       if(arr[i] > arr[j]) {
+//         temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//       }
+//     }
+//   }
+//    console.log(arr);
+//
+//    return arr[k-1];
+//
+// }
+//
+//
+//
+//
+// console.log(func([1,4,2,6,3],3))
+//
+//
+//
+//
 
 
 //--------------------------Write a JavaScript program to find the maximal difference between any two adjacent elements of a given array of integers
@@ -935,23 +1026,38 @@
 
 //--------------------------Write a JavaScript program to find the number which appears most in a given array of integers.
 
-//                      ASK THIS ONE !!!!!!!!!!!!!!!
 
-
+//
 // function func(arr) {
-//  var obj = {};
-//  var newArr = [];
-//  for(var i=0 ; i<arr.length; i++) {
-//    if(!obj[arr[i]]) {
-//      obj[arr[i]] = 1;
-//    } else {
-//      newArr.push(arr[i]);
+//
+//  var map = new Map();
+//
+//  for(var i=0; i<arr.length; i++) {
+//    var count=map.get(arr[i].toString());
+//    if(count == undefined ) {
+//      count = 0;
 //    }
+//    map.set(arr[i].toString(),count+1);
 //  }
-//    return newArr;
+//    console.log(map)
+//
+//     var max_value = 0;
+//     var max_key;
+//     for (let [key, value] of map) {
+//
+//
+//     if(value > max_value) {
+//       max_value = value;
+//       max_key = key;
+//     }
+// }
+//
+//          return max_key;
 // }
 //
 // console.log(func([1,1,2,3,3,3,4,4,4,4,4,4]));
+
+
 
 //--------------------------Write a JavaScript program to replace all the numbers with a specified number of a given array of integers
 
@@ -978,7 +1084,7 @@
 
 //--------------------------Write a JavaScript program to find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.
 
-// function func(str){
+// function func(){
 //
 //   }
 
@@ -1043,29 +1149,30 @@
 //-----------------------------Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number
 
 
-//                         TRY THIS ONE MORE TIME !!!!!!!!!!!!
-// function func(num) {
-//   var arr = ("" + num).split("");
-//   num_last_digit = num % 10;
-//   num_first_digit = Math.floor(num / Math.pow(10 , arr.length - 1));
-//   num_middle_digit = (Math.floor(num / 10)) % 10;
-//   var max_number = [];
+//   UNDERSTAND THIS !!!!!!!!
+
+// function generateNumber(arr, i) {
+//   var final = "";
+//   for(var x=0; x<arr.length; x++) {
+//     if(x!=i) {
+//       final+=arr[x];
+//     }
+//   }
 //
-//
-//   var max_digit = Math.max(...arr);
-//   max_number.push(arr.slice(arr.indexOf(max_digit) , arr.length-1));
-//
-//
-//
-//    console.log(max_number);
-//    console.log(max_digit);
-//    console.log(num_last_digit);
-//    console.log(num_first_digit);
-//    console.log(num_middle_digit);
+//   return parseInt(final);
 // }
-// console.log(func(42345));
-
-
+//
+// function func(num) {
+//   var sayilar = [];
+// var arr=("" + num).split("");
+// for(i=0; i<arr.length; i++) {
+//    sayilar.push(generateNumber(arr,i))
+// }
+//
+//   return Math.max(...sayilar);
+//
+// }
+// console.log(func(4532));
 //----------------------------Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer
 
 //
@@ -1087,28 +1194,25 @@
 ///                  COME BACK TO THIS ONE !!!!!!!!!!!!!
 
 // function func(num) {
-//   var arr = ("" + num).split("");
-//   console.log(arr);
-//   let sum=0;
-//   for(var i=0; i<arr.length; i++) {
-//      sum += Number(arr[i]);
 //
+// var sum = 0;
+// var arr=("" + num).split("");
+// for(var i=0; (i<arr.length ); i++) {
+//   sum = sum + parseInt(arr[i]);
+//
+//    //console.log(sum);
+//    //console.log(arr);
+//
+//   if(sum > 10) {
+//     arr = ("" + sum).split("");
+//     i=0;
+//     sum=0;
 //   }
-//    console.log(sum);
-//    var arr2= ("" + sum).split("")
-//    var sum2 = 0;
-//    var x = 0;
-//         for(j=0; j<arr2.length; j++) {
-//             sum2 = sum2 + Number(arr2[j]);
-//          }
-//
-//
-//
-//    console.log(sum2);
+// }
+//  return sum;
 //
 // }
-// console.log(func(185));
-
+// console.log(func(155))
 //-----------------------------Write a JavaScript program to divide an integer by another integer as long as the result is an integer and return the result.
 
 // function func(num , divider) {
@@ -1160,35 +1264,47 @@
 
 //-----------------------------Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
 
-//                            COME BACK TO THIS !!!!!!!!
-
-// function func(num) {
 //
+// function isPrime(num) {
+//
+//  for(var i=2; i<num; i++) {
+//    if(num % i===0) {
+//      return false;
+//    }
+//
+//  }
+//    return num > 1;
 // }
 //
-// console.log(func(7));
-
-//------------------------------ Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
-
-//                            COME BACK TO THIS !!!!!!!!
-
-// function func(arr , num ) {
+//   console.log(isPrime(7))
+//   console.log(isPrime(15))
 //
-// var arrayEven = [];
-//
-//   for(var i=0; i < num; i++) {
-//     if(arr[i] % 2 == 0 ) {
-//       arrayEven.push(arr[i]);
+// function func(number) {
+//   var arr=[];
+//   for(x=0; x<number; x++) {
+//     if(isPrime(x)) {
+//       arr.push(x)
 //     }
 //   }
-//    arrayEven.push(0);
-//    return arrayEven[0];
-//
-//
-//
+//     return arr;
+// }
+// console.log(func(15))
+//------------------------------ Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
+
+
+
+// function func(arr, num) {
+// var count=0;
+// for(var i=0; i<arr.indexOf(num); i++) {
+//   if(arr[i] % 2 === 0) {
+//     count++;
+//   }
 //
 // }
+//  return count;
 //
+// }
+// //
 // console.log(func([1,2,3,4,5,6,7,8], 5));
 // console.log(func([1,3,5,6,7,8], 6));
 
@@ -1211,6 +1327,7 @@
 //--------------------------Write a JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number.
 
 
+      // come back to this !!!!!
 
 
 
@@ -1332,29 +1449,32 @@
 
 
 // --------------------------Write a JavaScript program to find the longest string from a given array.
-
-//                         COME BACK TO THIS ONE !!!!!!
-
-
+//
 // function func(arr) {
 //
-//    var newArr = [];
-//     var max = 0;
-//     for(var i=0; i<arr.length; i++) {
+// var map = new Map();
 //
-//      newArr.push(arr[i].split(""));
+// for(var i=0; i<arr.length; i++) {
 //
-//
-//
-//     }
-//      console.log(newArr[0].length)
-//      console.log(newArr[1].length)
-//      console.log(newArr);
-//
-//
+//   map.set(arr[i], arr[i].length);
 // }
 //
-// console.log(func(["tugce","baydar"]))
+// console.log(map)
+//
+//
+// var max_value = 0;
+// var max_key;
+//
+// for(let [key,value] of map) {
+//   if(value > max_value) {
+//     max_value = value;
+//     max_key =key;
+//   }
+// }
+//     return max_key;
+// }
+// //
+// console.log(func(["tugce","baydar","muttalip"]))
 
 //---------------------------Write a JavaScript program to get the largest even number from an array of integers.
 
@@ -1382,16 +1502,31 @@
 
 //----------------------Write a JavaScript program to find the smallest prime number strictly greater than a given number
 //
-// function func(num) {
-//
-//
-//
-//
-//
-//
+
+
+// function isPrime(number) {
+//   for (var i=2; i<number; i++) {
+//     if(number % i===0) {
+//       return false;
+//     }
+//   }
+//    return number > 1;
 // }
+//
+//
+// function func(num) {
+// var arr=[];
+// for(var x=num+1; ; x++) {
+//   if(isPrime(x)) {
+//     arr.push(x);
+//   }
+// }
+//
+//  return Math.min(...arr);
+// }
+//
 // console.log(func(7));
-// console.log(func(10));
+// console.log(func(16));
 
 
 //------------------------- Write a JavaScript program to find the number of even digits in a given integer
@@ -1416,11 +1551,36 @@
 
 //----------------------------Write a JavaScript program to find all distinct prime factors of a given integer
 
-
-
-
-
-
+// function isPrime(num) {
+//   for(var i=2; i<num; i++) {
+//     if(num % i===0) {
+//       return false;
+//     }
+//   }
+//     return num > 1;
+// }
+//
+// function func(number) {
+//   var arr=[];
+//   var arr2=[];
+//   for(var x=0; x<number; x++) {
+//     if(isPrime(x)) {
+//       arr.push(x);
+//     }
+//
+//   }
+//     console.log(arr);
+//
+//     for(j=0; j<arr.length; j++) {
+//       if(number % arr[j] === 0) {
+//         arr2.push(arr[j]);
+//       }
+//     }
+//      return arr2;
+// }
+//
+//
+// console.log(func(88));
 
 
 
@@ -1428,61 +1588,37 @@
 
 //------------------------------Write a JavaScript program to remove all characters from a given string that appear more than once.
 
-
-//                       COME BACK TO THIS ONE !!!!!!!!!!!!!!
-
-
 // function func(str) {
 //
 // var arr=str.split("");
 // var obj={};
-// var array=[];
+// var arr3=[];
 //
 // for(var i=0; i<arr.length; i++) {
-//   if(!obj[arr[i]]){
-//     obj[arr[i]] = 1
-//   } else{
-//   array.push(arr[i])
+//
+//  if(!obj[arr[i]]) {
+//      obj[arr[i]] = 1;
+//      arr3.push(arr[i]);
 //  }
-// }
-//   console.log(array);
-//
-//  var removedIndexs=[];
-//  var removedArr;
-//  for(var j=0; j<array.length; j++) {
-//
-//
-//   removedIndexs.push(arr.indexOf(array[j]));
-//
 //
 // }
-//   console.log(removedIndexs); // 1,5
-//   removedArr = arr.splice(removedIndexs[0] , 1);
 //
+//  console.log(arr3);
 //
-//   console.log(removedArr);
-//
-//   console.log(removedArr.join(""));
+// //  for(j=0; j<arr2.length; j++) {
+// //   arr.splice(arr.indexOf(arr2[j]),1)
+// //  }
+// //   return arr.join("");
 // }
-// console.log(func("tugcuee"));
+//
+// console.log(func("tugggcee"))
 
 
 
-//         another solution
 
-// function func(str) {
-//   var arr=str.split("");
-//   var result = [];
-//
-//   for(var i=0; i<arr.length; i++) {
-//     if(str.indexOf(arr[i]) === str.lastIndexOf(arr[i])) {
-//       result.push(arr[i]);
-//     }
-//   }
-//   return result.join("");
-// }
-//
-// console.log(func("Tuugcee"));
+
+
+
 
 //------------------------------Write a JavaScript program to replace the first digit in a string (should contains at least digit) with $ character.
 //
@@ -1527,9 +1663,17 @@
 
 //-------------------------Write a JavaScript program to check if all the digits in a given number are the same or not.
 
-//                         COME BACK TO THIS !!!!!
-
+//
 // function func(num) {
+//
+// var arr= ("" + num).split("");
+//
+// for(var i=0; i<arr.length; i++) {
+//    if(arr[i] == arr[i+1]) {
+//      return true;
+//    }
+// }
+//   return false;
 //
 // }
 // console.log(func(111));
@@ -1574,10 +1718,11 @@
 
 //-------------------------Write a JavaScript program to find the maximum integer n such that 1 + 2 + ... + n <= an given integer.
 
-
-//                      COME BACK TOT HIS ONE !!!!!!!!!
-
-
+// function func(num) {
+//   return (num * (num+1)) / 2;
+// }
+//
+// console.log(func(10))
 
 
 //--------------------------Write a JavaScript program to compute the sum of all digits that occur in a given string
@@ -1598,10 +1743,25 @@
 
 //----------------------------Write a JavaScript program to swap two halves of a given array of integers of even length.
 
+//[0,1,2,3,4,5]
+//[3,4,5,0,1,2]
 
-
-
-
+// function func(arr) {
+//
+//   for(var i = 0; i < arr.length/2; i++)
+//   {
+//     // swap arr[i],arr[i+3]
+//     temp = arr[i];
+//     arr[i] = arr[i+3];
+//     arr[i+3] = temp;
+//   }
+//
+// return arr;
+//
+// }
+//
+// console.log(func([0,1,2,3,4,5]))
+//
 
 
 
@@ -1626,4 +1786,317 @@
 //
 // console.log(func("tUgcE"));
 
-//-----------------------------
+//-----------------------------Write a JavaScript function to check whether an `input` is an array or not
+
+// function func(input) {
+//   if(toString.call(input) === "[object Array]") {
+//     return true;
+//   }
+//   return false;
+// }
+// console.log(func([1,2,3]))
+// console.log(func("tugce"))
+
+//------------------------Write a JavaScript function to clone an array
+
+// function func(arr) {
+//   return arr.slice(0);
+// }
+//
+// console.log(func([1,2,3]))
+
+//---------------------Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
+
+// function func(arr, n) {
+//   if(n === null) {
+//     return arr[arr.length-1];
+//   } else if( n < 0 ) {
+//     return [];
+//   }
+//
+//    return arr.slice(Math.max(arr.length-n, 0 ));
+//
+// }
+// console.log(func([1,2,3,4,5] , 2))
+
+
+//--------------------------Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+// function func(num) {
+//   var arr= ("" + num).split("");
+//
+//  for(var i=0; i<arr.length; i++) {
+//    if(arr[i] % 2 === 0 && arr[i+1] % 2===0) {
+//       arr[i] = arr[i] + "-"
+//    }
+//  }
+//     return arr.join("");
+// }
+// console.log(func(1224));
+// console.log(func(025408))
+
+//------------------------------Write a JavaScript program to sort the items of an array
+
+// function func(arr) {
+//
+//   function sortNumber(x,y) {
+//     return x-y;
+//   }
+//   arr.sort(sortNumber);
+//   return arr;
+// }
+// console.log(func([1,3,2,4000,5,0]));
+
+
+//---------------------------Write a JavaScript program to find the most frequent item of an array.
+
+// function func(arr) {
+//   var map = new Map();
+//
+//   for(var i=0; i<arr.length; i++) {
+//
+//     var count=map.get(arr[i]);
+//
+//   if(count == undefined) {
+//     count=0;
+//   }
+//     map.set(arr[i],count+1);
+//
+//
+//   }
+//
+//
+//   console.log(map);
+//    var max_value=0;
+//    var max_key;
+//
+//    for (let [key,value] of map) {
+//      if(value > max_value) {
+//        max_value = value;
+//        max_key = key;
+//      }
+//    }
+//     return max_key;
+// }
+//
+// console.log(func([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+
+//---------------------------Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
+//
+// function func(str) {
+//   var arr=str.split("");
+//
+//   for(var i=0; i<arr.length; i++) {
+//     if(/[A-Z]/.test(arr[i])) {
+//       arr[i] = arr[i].toLowerCase();
+//     } else {
+//      arr[i] = arr[i].toUpperCase();
+//   }
+// }
+//    return arr.join("")
+// }
+//
+// console.log(func("TugCe"));
+
+//----------------------------Write a JavaScript program which prints the elements of the following array.
+// function func() {
+//
+//  var arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+//
+//   for(var i=0; i<arr.length; i++) {
+//     console.log("row" + i)
+//     for(var j=0; j<arr[i].length; j++) {
+//       console.log("" + arr[i][j])
+//     }
+//   }
+//
+//
+//
+// }
+//
+// console.log(func())
+
+//------------------------------W Write a JavaScript program to add items in an blank array and display the items
+
+
+//               NOT DONE YET !!!!!!
+
+//
+//
+// $(document).ready(
+//
+//
+//   function func()  {
+//
+//
+//
+//   var btn1 = document.createElement("button");
+//   var btn2 = document.createElement("button");
+//   var input = document.createElement("input");
+//
+//
+//   btn1.innerText = "Add "
+//   btn2.innerText = "Display"
+//
+//
+//
+//   document.getElementById("DV").appendChild(btn1);
+//   document.getElementById("DV").appendChild(btn2);
+//   document.getElementById("DV").appendChild(input);
+//
+//   btn1.addEventListener("click", function() {
+//
+//      var value = document.getElementsByTagName("input")[0].value;
+//      console.log(value);
+//
+//
+//
+//
+//      localStorage.setItem("list",value);
+//
+//      alert(value + "added as index " )
+//
+//
+//
+//
+//
+//   });
+//
+//    btn2.addEventListener("click", function() {
+//
+//      var value = localStorage.getItem("list")
+//
+//      document.getElementById("display").innerHTML = value;
+//
+//
+//
+//    });
+//
+//
+//
+//
+//
+//
+//
+// });
+
+//----------------------------Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity)
+
+// function func(arr) {
+//   var obj={};
+//   var newArr=[];
+//
+//   for(var i=0; i<arr.length; i++) {
+//           if(!obj[arr[i]]) {
+//             obj[arr[i]] = 1
+//           } else {
+//             newArr.push(arr[i]);
+//           }
+//
+//    }
+//     console.log(newArr);
+//    for(var j=0; j <newArr.length; j++) {
+//      console.log(arr.indexOf(newArr[j]))
+//    }
+//
+//     arr.splice(1,1);
+//     arr.splice(4,1);
+//     return arr;
+//
+// }
+// console.log(func([1,2,2,3,4,4]));
+
+
+//------------------------------color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// o = ["th","st","nd","rd"]
+// Write a JavaScript program to display the colors in the following way :
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+
+// function func(arr) {
+//
+// var arr = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+//
+// var o = ["th","st","nd","rd"];
+//
+//
+//
+// for(var i=0; i<3; i++) {
+//
+//     console.log((i+1) + o[i+1] + "choice is " + arr[i] );
+// }
+// for(var x=3; x<arr.length; x++) {
+//
+//    console.log((x+1) + o[0] + "choice is " + arr[x])
+//
+// }
+//
+//
+//
+// }
+
+
+console.log(func())
+
+
+
+//-----------------------------Write a JavaScript program to shuffle an array
+
+//                        ASK THIS !!!!!!!!!!!!!!
+
+// function func(arr) {
+//
+//
+//
+// }
+
+
+
+
+
+// console.log(func([3,4,5,6,13]))
+
+//----------------------------There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays
+
+
+
+// function func(arr1, arr2) {
+//   var max = Math.min(arr1.length, arr2.length);
+//   var arrNew = [];
+//
+//   if(arr1.length < arr2.length) {
+//     for(var i=0 ; i<arr2.length-arr1.length; i++) {
+//       arr1.push(0);
+//     }
+//   } else {
+//     for(var i=0 ; i<arr1.length-arr2.length; i++) {
+//       arr2.push(0);
+//     }
+//   }
+//     for(var x=0; x<arr1.length; x++) {
+//       arrNew.push(arr1[x] + arr2[x]);
+//     }
+//      return arrNew;
+// }
+// console.log(func([1,2,3,2],[3,4,5,6,7]))
+
+
+//---------------------------Write a JavaScript program to find duplicate values in a JavaScript array
+
+// function func(arr) {
+//   var newArr = [];
+//   var obj = {};
+//   var result = [];
+//
+//   for(var i=0 ;i<arr.length; i++) {
+//     if(!obj[arr[i]]) {
+//     obj[arr[i]] = 1;
+//   } else {
+//     newArr.push(arr[i]);
+//   }
+//
+// }
+//    return newArr;
+// }
+// console.log(func([1,1,2,3,4,4]))
